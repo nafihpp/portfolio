@@ -1,6 +1,6 @@
 import React from "react";
 
-function Input({ label, type, id, className,name }) {
+function Input({ label, type, id, className, name }) {
     return (
         <div className={`input ${className}`}>
             <label htmlFor={id}>{label} </label>

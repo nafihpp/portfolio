@@ -2,7 +2,7 @@ import React, { useState, useLayoutEffect } from "react";
 import { NavLink } from "react-router-dom";
 
 import "./Header.css";
-import Modal from "../UI/Modal";
+import Modal from "../Modals/Modal";
 
 function Header() {
     const [isShow, setIsShow] = useState(false);

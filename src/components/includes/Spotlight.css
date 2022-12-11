@@ -103,8 +103,7 @@
 /* #spotlight .right {} */
 #spotlight .right img {
     display: block;
-    width: 700px;
-    margin-bottom: 55px;
+    width: 100%;
 }
 
 /* media queries  */
@@ -122,10 +121,6 @@
 @media all and (max-width: 1440px) {
     #spotlight .left .links a {
         padding: 10px 25px;
-    }
-    #spotlight .right img {
-        width: 550px;
-        margin-bottom: 32px;
     }
 }
 /* @media all and (max-width:1280px){} */

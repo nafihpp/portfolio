@@ -1,5 +1,5 @@
 import React from "react";
-import Spotlight from "../components/Spotlight";
+import Spotlight from "./includes/Spotlight";
 
 function Home() {
     return <Spotlight />;

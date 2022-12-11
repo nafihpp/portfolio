@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import YouTube from "react-youtube";
 import styled from "styled-components";
-import todoThumb from "../assets/images/todo-app-thumbnail.jpg";
-import whatsappThumb from "../assets/images/whatsapp-ui-thumbnail.png";
-import todoAppThumb from "../assets/images/todo-app-thumbnail.png";
-import trendzThumb from "../assets/images/TrendZ-thumbnail.png";
-import Modal from "../UI/Modal";
+// import todoThumb from "../../assets/images/todo-app-thumbnail.jpg";
+// import whatsappThumb from "../../../assets/images/whatsapp-ui-thumbnail.png";
+// import todoAppThumb from "../../assets/images/todo-app-thumbnail.png";
+// import trendzThumb from "../../assets/images/TrendZ-thumbnail.png";
+import Modal from "../components/Modals/Modal";
 
 function Projects() {
     const [showModal, setShowModal] = useState(false);
-    const [activeTab, setActiveTab] = useState(1);
+    const [activeTab, setActiveTab] = useState("All");
     const [categories] = useState([
         {
             id: 1,
@@ -22,17 +22,24 @@ function Projects() {
             videos: [
                 {
                     id: "1",
-                    thumb: trendzThumb,
-                    title: "Food Ordering App",
+                    thumb: "trendzThumb",
+                    title: "Edtech Platform",
                     description:
-                        "TrendZ is a fully functional Instagram clone built with React, Redux-toolkit, Firebase, Python Django, Django-rest-framework, and PostgreSql database",
+                        "Ed-tech Platform with Monthly users of 10K+ fully functional built with Next JS, Zustand, Node JS, and PostgreSql database",
                 },
                 {
                     id: "2",
-                    thumb: trendzThumb,
+                    thumb: "trendzThumb",
+                    title: "Food Ordering",
+                    description:
+                        "Food Ordering App a fully functional built with Next JS, Zustand, Node JS, and PostgreSql database",
+                },
+                {
+                    id: "3",
+                    thumb: "trendzThumb",
                     title: "E-commerce",
                     description:
-                        "TrendZ is a fully functional Instagram clone built with React, Redux-toolkit, Firebase, Python Django, Django-rest-framework, and PostgreSql database",
+                        "E-commerce built with React, Redux, Node Js, and PostgreSql database",
                 },
             ],
         },
@@ -42,19 +49,11 @@ function Projects() {
             videos: [
                 {
                     id: "nL47iZHogWk",
-                    thumb: whatsappThumb,
-                    title: "WhatsApp UI Clone",
+                    thumb: "whatsappThumb",
+                    title: "Food Ordering App",
                     description: "WhatsApp UI clone built using React-Native",
                     githubLink:
                         "https://github.com/safwantaliparamba/WhatsApp-UI",
-                },
-                {
-                    id: "XF8wPhKxSvE",
-                    thumb: todoAppThumb,
-                    title: "Todo App React-Native",
-                    description: "WhatsApp UI built using React & Django",
-                    githubLink:
-                        "https://github.com/safwantaliparamba/ToDo-app-React-Native",
                 },
             ],
         },
@@ -64,12 +63,10 @@ function Projects() {
             videos: [
                 {
                     id: "qT88sxiRquY",
-                    thumb: todoThumb,
+                    thumb: "todoThumb",
                     title: "ToDo Website",
                     description:
-                        "Todo Website built using Python Django and PostgreSQL database",
-                    githubLink:
-                        "https://github.com/safwantaliparamba/django-todo-app",
+                        "Todo Website built using Express JS and PostgreSQL database",
                 },
             ],
         },
@@ -86,10 +83,10 @@ function Projects() {
                         <span
                             key={index}
                             className={
-                                category.id === activeTab ? "active" : ""
+                                category.name === activeTab ? "active" : ""
                             }
                             onClick={(e) => {
-                                setActiveTab(category.id);
+                                setActiveTab(category.name);
                             }}
                         >
                             {category.name}
@@ -98,18 +95,18 @@ function Projects() {
                 </TopTab>
                 <ItemContainer>
                     {categories.map((item) => {
-                        if (item.id === activeTab) {
+                        if (item.name === activeTab) {
                             return item.videos.map((video, index) => (
                                 <ImageContainer
                                     key={index}
                                     onClick={(e) => setShowModal(video)}
                                 >
-                                    <img
+                                    {/* <img
                                         loading="lazy"
                                         src={video.thumb}
                                         key={index}
                                         alt=""
-                                    />
+                                    /> */}
                                 </ImageContainer>
                             ));
                         } else if (activeTab === 1) {
@@ -118,12 +115,12 @@ function Projects() {
                                     key={index}
                                     onClick={(e) => setShowModal(video)}
                                 >
-                                    <img
+                                    {/* <img
                                         loading="lazy"
                                         src={video.thumb}
                                         key={index}
                                         alt=""
-                                    />
+                                    /> */}
                                 </ImageContainer>
                             ));
                         }

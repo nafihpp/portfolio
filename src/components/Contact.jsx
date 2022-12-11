@@ -2,8 +2,8 @@ import React, { useRef } from "react";
 import styled from "styled-components";
 import { useForm, ValidationError } from "@formspree/react";
 
-import contact from "../assets/images/contactus.webp";
-import Input from "../UI/Input";
+import contact from "./assets/images/contactus.webp";
+import Input from "./Modals/Input";
 
 function Contact() {
     const [state, handleSubmit] = useForm("xzbwkjqo");
@@ -16,8 +16,8 @@ function Contact() {
 
     return (
         <Wrapper>
-            <div className='wrapper'>
-                <div className='left'>
+            <div className="wrapper">
+                <div className="left">
                     <h1>
                         Lets talk about <br />
                         everything!
@@ -25,57 +25,52 @@ function Contact() {
                     <p>
                         Hate forms? send me an{" "}
                         <a
-                            href='mailto: safwansafu242090@gmail.com'
-                            target='_blank'
-                            rel='noopener noreferrer'>
+                            href="mailto: nafihpp@gmail.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             email
                         </a>
                         instead
                     </p>
-                    <img
-                        src={contact}
-                        alt='contact_image'
-                    />
+                    <img src={contact} alt="contact_image" />
                 </div>
-                <div className='right'>
-                    <form
-                        onSubmit={handleSubmit}
-                        ref={formRef}>
+                <div className="right">
+                    <form onSubmit={handleSubmit} ref={formRef}>
                         <Input
-                            id='name'
-                            name='name'
-                            label='Full name'
-                            className='name'
-                            type='text'
+                            id="name"
+                            name="name"
+                            label="Full name"
+                            className="name"
+                            type="text"
                         />
                         <Input
-                            id='email'
-                            name='email'
-                            label='Email'
-                            className='email'
-                            type='email'
+                            id="email"
+                            name="email"
+                            label="Email"
+                            className="email"
+                            type="email"
                         />
                         <div>
-                            <label htmlFor='message'>Message</label>
+                            <label htmlFor="message">Message</label>
                             <textarea
-                                name='message'
-                                id='message'
-                                cols='20'
-                                rows='10'></textarea>
+                                name="message"
+                                id="message"
+                                cols="20"
+                                rows="10"
+                            ></textarea>
                         </div>
                         {state.errors && (
                             <ValidationError
-                                prefix='Message'
-                                field='message'
+                                prefix="Message"
+                                field="message"
                                 errors={state.errors}
                             />
                         )}
 
                         {state.succeeded && <Success />}
                         <div>
-                            <button
-                                type='submit'
-                                disabled={state.submitting}>
+                            <button type="submit" disabled={state.submitting}>
                                 SEND MESSAGE
                             </button>
                         </div>
