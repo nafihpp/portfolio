@@ -1,25 +1,21 @@
 import React, { useState } from "react";
 import YouTube from "react-youtube";
 import styled from "styled-components";
-// import todoThumb from "../../assets/images/todo-app-thumbnail.jpg";
-// import whatsappThumb from "../../../assets/images/whatsapp-ui-thumbnail.png";
-// import todoAppThumb from "../../assets/images/todo-app-thumbnail.png";
-// import trendzThumb from "../../assets/images/TrendZ-thumbnail.png";
 import Modal from "../components/Modals/Modal";
 
 function Projects() {
-    const [showModal, setShowModal] = useState(false);
-    const [activeTab, setActiveTab] = useState("All");
+    const [showModal, setShowModal] = useState(true);
+    const [activeTab, setActiveTab] = useState(1);
     const [categories] = useState([
         {
             id: 1,
             name: "All",
-            videos: [],
+            projects: [],
         },
         {
             id: 2,
             name: "React",
-            videos: [
+            projects: [
                 {
                     id: "1",
                     thumb: "trendzThumb",
@@ -46,7 +42,7 @@ function Projects() {
         {
             id: 3,
             name: "React-Native",
-            videos: [
+            projects: [
                 {
                     id: "nL47iZHogWk",
                     thumb: "whatsappThumb",
@@ -60,7 +56,7 @@ function Projects() {
         {
             id: 4,
             name: "React JS & Node JS",
-            videos: [
+            projects: [
                 {
                     id: "qT88sxiRquY",
                     thumb: "todoThumb",
@@ -86,7 +82,11 @@ function Projects() {
                                 category.name === activeTab ? "active" : ""
                             }
                             onClick={(e) => {
-                                setActiveTab(category.name);
+                                if (category.name !== "All") {
+                                    setActiveTab(category.name);
+                                } else {
+                                    setActiveTab(1);
+                                }
                             }}
                         >
                             {category.name}
@@ -96,10 +96,10 @@ function Projects() {
                 <ItemContainer>
                     {categories.map((item) => {
                         if (item.name === activeTab) {
-                            return item.videos.map((video, index) => (
+                            return item.projects.map((project, index) => (
                                 <ImageContainer
                                     key={index}
-                                    onClick={(e) => setShowModal(video)}
+                                    onClick={(e) => setShowModal(null)}
                                 >
                                     {/* <img
                                         loading="lazy"
@@ -107,10 +107,11 @@ function Projects() {
                                         key={index}
                                         alt=""
                                     /> */}
+                                    <h1>{project.title}</h1>
                                 </ImageContainer>
                             ));
                         } else if (activeTab === 1) {
-                            return item.videos.map((video, index) => (
+                            return item.projects.map((project, index) => (
                                 <ImageContainer
                                     key={index}
                                     onClick={(e) => setShowModal(video)}
@@ -121,6 +122,7 @@ function Projects() {
                                         key={index}
                                         alt=""
                                     /> */}
+                                    <h1>{project.title}</h1>
                                 </ImageContainer>
                             ));
                         }
