@@ -1,16 +1,14 @@
 import React, { useRef } from "react";
 import styled from "styled-components";
-import { useForm, ValidationError } from "@formspree/react";
 import contact from "./assets/images/contactus.webp";
 import Input from "./Modals/Input";
 
 function Contact() {
-    const [state, handleSubmit] = useForm("");
     const formRef = useRef();
 
     const Success = () => {
         formRef.current.reset();
-        return <SuccessMessage>Thanks for contacting!!</SuccessMessage>;
+        return <h1>Thanks for contacting!!</h1>;
     };
 
     return (
@@ -35,7 +33,7 @@ function Contact() {
                     <img src={contact} alt="contact_image" />
                 </div>
                 <div className="right">
-                    <form onSubmit={handleSubmit} ref={formRef}>
+                    <form onSubmit={Success} ref={formRef}>
                         <Input
                             id="name"
                             name="name"
@@ -59,19 +57,9 @@ function Contact() {
                                 rows="10"
                             ></textarea>
                         </div>
-                        {state.errors && (
-                            <ValidationError
-                                prefix="Message"
-                                field="message"
-                                errors={state.errors}
-                            />
-                        )}
 
-                        {state.succeeded && <Success />}
                         <div>
-                            <button type="submit" disabled={state.submitting}>
-                                SEND MESSAGE
-                            </button>
+                            <button type="submit">SEND MESSAGE</button>
                         </div>
                     </form>
                 </div>

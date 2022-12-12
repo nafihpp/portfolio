@@ -70,18 +70,36 @@ function Header() {
                             <Modal onClick={toggleHandler}>
                                 <ul className="mobile-menu">
                                     <li>
-                                        <NavLink to="/">Home</NavLink>
+                                        <NavLink
+                                            to="/"
+                                            onClick={(e) => setIsShow(false)}
+                                        >
+                                            Home
+                                        </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="/about">About</NavLink>
+                                        <NavLink
+                                            to="/about"
+                                            onClick={(e) => setIsShow(false)}
+                                        >
+                                            About
+                                        </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="/projects">
+                                        <NavLink
+                                            to="/projects"
+                                            onClick={(e) => setIsShow(false)}
+                                        >
                                             Projects
                                         </NavLink>
                                     </li>
                                     <li>
-                                        <NavLink to="/contact">Contact</NavLink>
+                                        <NavLink
+                                            to="/contact"
+                                            onClick={(e) => setIsShow(false)}
+                                        >
+                                            Contact
+                                        </NavLink>
                                     </li>
                                 </ul>
                             </Modal>

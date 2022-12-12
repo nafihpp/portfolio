@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import YouTube from "react-youtube";
 import styled from "styled-components";
-import Modal from "../components/Modals/Modal";
+import Modal from "../components/Modals/AcceptModal";
 
 function Projects() {
     const [showModal, setShowModal] = useState(true);
@@ -129,22 +129,7 @@ function Projects() {
                         return null;
                     })}
                 </ItemContainer>
-                {showModal && (
-                    <Modal onClick={closeModal}>
-                        <VideoContainer>
-                            <h1>{showModal.title}</h1>
-                            <p>{showModal.description}</p>
-                            <a
-                                href={showModal.githubLink}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                project link
-                            </a>
-                            <YouTube videoId={showModal.id} />
-                        </VideoContainer>
-                    </Modal>
-                )}
+                {showModal && <Modal showModal={showModal} />}
             </Container>
         </>
     );
