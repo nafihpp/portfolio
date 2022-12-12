@@ -1,12 +1,11 @@
 import React, { useRef } from "react";
 import styled from "styled-components";
 import { useForm, ValidationError } from "@formspree/react";
-
 import contact from "./assets/images/contactus.webp";
 import Input from "./Modals/Input";
 
 function Contact() {
-    const [state, handleSubmit] = useForm("xzbwkjqo");
+    const [state, handleSubmit] = useForm("");
     const formRef = useRef();
 
     const Success = () => {
