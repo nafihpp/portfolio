@@ -114,7 +114,7 @@ function Projects() {
                             return item.projects.map((project, index) => (
                                 <ImageContainer
                                     key={index}
-                                    onClick={(e) => setShowModal(video)}
+                                    onClick={(e) => setShowModal(true)}
                                 >
                                     {/* <img
                                         loading="lazy"
