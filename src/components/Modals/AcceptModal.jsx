@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 // import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -28,6 +28,7 @@ function AcceptModal({ showModal }) {
                             slidesPerView={1}
                             navigation
                             pagination={false}
+                            autoplay={{ delay: 5000 }}
                             scrollbar={{ draggable: true }}
                             onSwiper={(swiper) => console.log(swiper)}
                             onSlideChange={() => console.log("slide change")}
@@ -35,8 +36,8 @@ function AcceptModal({ showModal }) {
                             <SwiperSlide>
                                 <ImageContainer>
                                     <img
-                                        style={{ width: "100px" }}
-                                        src={require("../assets/images/profile-img.png")}
+                                        style={{ width: "73%" }}
+                                        src={require("../assets/images/IMG_5528.jpg")}
                                         alt=""
                                     />
                                 </ImageContainer>
@@ -44,8 +45,8 @@ function AcceptModal({ showModal }) {
                             <SwiperSlide>
                                 <ImageContainer>
                                     <img
-                                        style={{ width: "100px" }}
-                                        src={require("../assets/images/profile-img.png")}
+                                        style={{ width: "73%" }}
+                                        src={require("../assets/images/IMG_5529.jpg")}
                                         alt=""
                                     />
                                 </ImageContainer>
@@ -88,7 +89,12 @@ function AcceptModal({ showModal }) {
                                 </ImageContainer>
                             </SwiperSlide>
                         </Swiper>
-                        <h1>contents here</h1>
+                        <p>
+                            Its closed loyalty programs for selected financially
+                            elite class users. Build using React, Node, GraphQL
+                            and Firebase. We were able deliver fully custom
+                            point and class based reward system.
+                        </p>
                     </MiddleContainer>
                 </Conatiner>
             </Modal>
@@ -126,7 +132,7 @@ const Modal = styled.div`
     width: 90%;
     max-width: 500px;
     height: 40vh;
-    height: ${({ textarea }) => (textarea ? "90vh" : "")};
+    height: 60%;
     margin: 0 auto;
     left: 50%;
     top: 50%;
@@ -142,12 +148,14 @@ const Modal = styled.div`
 
     @media all and (max-width: 980px) {
         width: 650px;
+        height: 80%;
     }
     @media all and (max-width: 768px) {
         width: 550px;
     }
     @media all and (max-width: 640px) {
         width: 400px;
+        height: 80%;
     }
     @media all and (max-width: 480px) {
         width: 340px;
