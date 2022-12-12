@@ -36,6 +36,7 @@ function Spotlight() {
                                     <img src={github} alt="github" />
                                 </a>
                             </li>
+
                             <li>
                                 <a href="https://www.linkedin.com/in/nafihpp/">
                                     <img src={linkedin} alt="linkedin" />

@@ -17,6 +17,15 @@
     font-weight: 700;
     color: #36174d;
 }
+.mob-menu {
+    background: #fff;
+    position: absolute;
+    top: 129px;
+    left: 86px;
+    padding: 40px;
+    border-radius: 21px;
+    min-width: 54%;
+}
 /* #header header nav {} */
 #header header nav ul {
     display: flex;

@@ -18,7 +18,7 @@ function AcceptModal({ showModal }) {
             <Modal>
                 <Conatiner>
                     <HeadingContainer>
-                        <Heading style={{ color: "#fff" }}>Project</Heading>
+                        <Heading style={{ color: "#000" }}>Project</Heading>
                     </HeadingContainer>
                     <MiddleContainer>
                         <Swiper
@@ -89,12 +89,6 @@ function AcceptModal({ showModal }) {
                                 </ImageContainer>
                             </SwiperSlide>
                         </Swiper>
-                        <p>
-                            Its closed loyalty programs for selected financially
-                            elite class users. Build using React, Node, GraphQL
-                            and Firebase. We were able deliver fully custom
-                            point and class based reward system.
-                        </p>
                     </MiddleContainer>
                 </Conatiner>
             </Modal>
@@ -131,8 +125,6 @@ const Overlay = styled.div`
 const Modal = styled.div`
     width: 90%;
     max-width: 500px;
-    height: 40vh;
-    height: 60%;
     margin: 0 auto;
     left: 50%;
     top: 50%;
@@ -141,7 +133,6 @@ const Modal = styled.div`
     transition: 0.5s;
     z-index: 101;
     border: 1px solid #3b3b3b;
-    background: #161619;
     border-radius: 5px;
     overflow-y: hidden;
     box-shadow: 0px 3px 56px #00000048;

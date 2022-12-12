@@ -1,8 +1,6 @@
 import React, { useState, useLayoutEffect } from "react";
 import { NavLink } from "react-router-dom";
-
 import "./Header.css";
-import Modal from "../Modals/Modal";
 
 function Header() {
     const [isShow, setIsShow] = useState(false);
@@ -60,14 +58,16 @@ function Header() {
                             id="menu-toggler"
                             data-class="menu-active"
                             className="hamburger"
-                            onClick={toggleHandler}
+                            onClick={(e) => {
+                                setIsShow(!isShow);
+                            }}
                         >
                             <span className="hamburger-line hamburger-line-top"></span>
                             <span className="hamburger-line hamburger-line-middle"></span>
                             <span className="hamburger-line hamburger-line-bottom"></span>
                         </button>
                         {isShow && (
-                            <Modal onClick={toggleHandler}>
+                            <div onClick={toggleHandler} className="mob-menu">
                                 <ul className="mobile-menu">
                                     <li>
                                         <NavLink
@@ -102,7 +102,7 @@ function Header() {
                                         </NavLink>
                                     </li>
                                 </ul>
-                            </Modal>
+                            </div>
                         )}
                     </div>
                 )}

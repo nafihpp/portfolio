@@ -131,6 +131,9 @@
     #spotlight {
         padding: 0px 0 0;
     }
+    #spotlight .left {
+        padding: 0;
+    }
 }
 @media all and (max-width: 960px) {
     #spotlight .right img {
