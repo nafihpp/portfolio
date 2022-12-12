@@ -14,7 +14,7 @@ import "swiper/css/scrollbar";
 function AcceptModal({ showModal }) {
     return (
         <BackContainer style={{ transform: showModal && "scale(1,1)" }}>
-            <Overlay onClick={() => handleModal()}></Overlay>
+            <Overlay></Overlay>
             <Modal>
                 <Conatiner>
                     <HeadingContainer>

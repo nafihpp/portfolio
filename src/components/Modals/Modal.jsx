@@ -2,6 +2,7 @@ import { React, useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 
 export default function Modal() {
+    const [modal, setModal] = useState(true);
     function useOutsideClick(ref) {
         useEffect(() => {
             function handleClickOutside(event) {
