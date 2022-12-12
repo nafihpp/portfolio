@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Spotlight.css";
-// import github from "../assets/images/linkedin.png";
-// import linkedin from "../assets/images/linkedin.png";
+import github from "../assets/icons/github.png";
+import linkedin from "../assets/icons/linkedin.png";
 
 function Spotlight() {
     return (
@@ -33,12 +33,12 @@ function Spotlight() {
                         <ul>
                             <li>
                                 <a href="https://github.com/nafihpp">
-                                    {/* <img src={github} alt="github" /> */}
+                                    <img src={github} alt="github" />
                                 </a>
                             </li>
                             <li>
                                 <a href="https://www.linkedin.com/in/nafihpp/">
-                                    {/* <img src={linkedin} alt="linkedin" /> */}
+                                    <img src={linkedin} alt="linkedin" />
                                 </a>
                             </li>
                         </ul>
