@@ -17,7 +17,8 @@ function Spotlight() {
                     <div className="about">
                         <span className="line" />
                         <p>
-                            React JS|ReactNative|Node JS <br />{" "}
+                            React JS|ReactNative|Express JS| Java Spring Boot{" "}
+                            <br />{" "}
                         </p>
                     </div>
                     <div className="links">

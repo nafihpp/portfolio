@@ -21,7 +21,7 @@ function Projects() {
                     thumb: "trendzThumb",
                     title: "Edtech Platform",
                     description:
-                        "Ed-tech Platform with Monthly users of 10K+ fully functional built with Next JS, Zustand, Node JS, and PostgreSql database",
+                        "Ed-tech Platform with Monthly users of 20K+ fully functional built with React JS, Redux, Styled Components",
                 },
                 {
                     id: "2",
@@ -61,6 +61,19 @@ function Projects() {
                     id: "qT88sxiRquY",
                     thumb: "todoThumb",
                     title: "ToDo Website",
+                    description:
+                        "Todo Website built using Express JS and PostgreSQL database",
+                },
+            ],
+        },
+        {
+            id: 5,
+            name: "React JS & Java SpringBoot",
+            projects: [
+                {
+                    id: "qT88sxiRquY",
+                    thumb: "todoThumb",
+                    title: "Banking App",
                     description:
                         "Todo Website built using Express JS and PostgreSQL database",
                 },
@@ -123,13 +136,13 @@ function Projects() {
                                         alt=""
                                     /> */}
                                     <h1>{project.title}</h1>
+                                    <h2>{project.description}</h2>
                                 </ImageContainer>
                             ));
                         }
                         return null;
                     })}
                 </ItemContainer>
-                {showModal && <Modal showModal={showModal} />}
             </Container>
         </>
     );

@@ -42,7 +42,7 @@
     font-size: 18px;
     font-weight: 500;
     padding: 12px 24px;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 #header header nav ul li a.active {
     background: #9e5ef3;
