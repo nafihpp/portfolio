@@ -1,7 +1,7 @@
 .closebutton {
     position: absolute;
-    right: 145px;
-    top: 140px;
+    right: 110px;
+    top: 130px;
     font-size: 25px;
     z-index: 100;
     cursor: pointer;
