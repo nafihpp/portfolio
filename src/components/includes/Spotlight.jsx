@@ -47,7 +47,7 @@ function Spotlight() {
                 </div>
                 <div className="right">
                     <img
-                        src={require("../assets/images/profile-img.png")}
+                        src={require("../assets/images/profile-pic (1).png")}
                         alt="Profile"
                     />
                 </div>

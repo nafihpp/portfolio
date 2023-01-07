@@ -100,6 +100,9 @@
     display: block;
     width: 100%;
 }
+#spotlight .right {
+    width: 30%;
+}
 /* #spotlight .right {} */
 #spotlight .right img {
     display: block;
