@@ -10,7 +10,7 @@ function Spotlight() {
             <div className="wrapper">
                 <div className="left">
                     <h1>
-                        Hi <br /> I'm <span>Mohammed Nafih Yuseph</span>
+                        Hi <br /> I'm <span>Mohammed Nafih</span>
                         <br />
                     </h1>
                     <p>Software Engineer</p>
@@ -18,7 +18,7 @@ function Spotlight() {
                         <span className="line" />
                         <p>
                             React JS|ReactNative|Express JS| Java Spring Boot{" "}
-                            <br />{" "}
+                            <br />
                         </p>
                     </div>
                     <div className="links">
