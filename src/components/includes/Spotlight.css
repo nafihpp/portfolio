@@ -177,6 +177,9 @@
     #spotlight .right img {
         margin-bottom: 0;
     }
+    #spotlight .right {
+        width: 93%;
+    }
 }
 @media all and (max-width: 360px) {
 }
