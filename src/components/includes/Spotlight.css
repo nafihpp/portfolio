@@ -178,13 +178,10 @@
         margin-bottom: 0;
     }
     #spotlight .right {
-        width: 93%;
+        width: 100%;
     }
 }
 @media all and (max-width: 360px) {
-    #spotlight .right {
-        width: 100%;
-    }
 }
 @media all and (max-width: 320px) {
 }
