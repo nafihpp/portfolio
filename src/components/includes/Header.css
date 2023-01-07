@@ -1,3 +1,11 @@
+.closebutton {
+    position: absolute;
+    right: 145px;
+    top: 140px;
+    font-size: 25px;
+    z-index: 100;
+    cursor: pointer;
+}
 #header {
     width: 100%;
     background: #f3effe;
