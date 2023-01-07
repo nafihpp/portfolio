@@ -210,7 +210,7 @@ const TopTab = styled.div`
         display: inline-block;
         padding: 8px 18px;
         font-weight: 600;
-        border-radius: 15px;
+        border-radius: 4px;
         cursor: pointer;
 
         &.active {
