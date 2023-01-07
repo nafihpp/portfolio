@@ -167,6 +167,9 @@
     #spotlight .wrapper {
         flex-direction: column-reverse;
     }
+    #spotlight .right {
+        width: 73%;
+    }
 }
 @media all and (max-width: 480px) {
     #spotlight .left h1 {
